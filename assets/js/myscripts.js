@@ -1,10 +1,9 @@
-
 // Landing Page side menu//
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Closes the sidebar menu
-  $(".menu-toggle").click(function(e) {
+  $(".menu-toggle").click(function (e) {
     e.preventDefault();
     $("#sidebar-wrapper").toggleClass("active");
     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
@@ -12,7 +11,7 @@
   });
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -26,14 +25,14 @@
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('#sidebar-wrapper .js-scroll-trigger').click(function() {
+  $('#sidebar-wrapper .js-scroll-trigger').click(function () {
     $("#sidebar-wrapper").removeClass("active");
     $(".menu-toggle").removeClass("active");
     $(".menu-toggle > .fa-bars, .menu-toggle > .fa-times").toggleClass("fa-bars fa-times");
   });
 
   // Scroll to top button appear
-  $(document).scroll(function() {
+  $(document).scroll(function () {
     var scrollDistance = $(this).scrollTop();
     if (scrollDistance > 100) {
       $('.scroll-to-top').fadeIn;
@@ -44,39 +43,44 @@
 
 })(jQuery); // End of use strict
 
-$('#landingbanner').animatescroll({scrollSpeed:2000,easing:'easeOutBounce'});
+//$('#landingbanner').animatescroll({
+//scrollSpeed: 2000,
+//easing: 'easeOutBounce'
+//});
 
 
 //hide button jquery old Code//
 //$(window).scroll(function () {
-  //  if ($(this).scrollTop() > 50) {
+//  if ($(this).scrollTop() > 50) {
 
-    //    $('.navbar').css('background', 'transparent');
+//    $('.navbar').css('background', 'transparent');
 
-    //} else {
-      //  $('.navbar').css('background', 'transparent');
-    //}
+//} else {
+//  $('.navbar').css('background', 'transparent');
+//}
 //});
 
 
 //navbar closemenu colapse show and close and toggler show and close//  
 //$(document).ready(function () {
-  //  $(".navbar-toggler").click(function () {
-    //    $("#navbarSupportedContent").toggle();
-   // });
+//  $(".navbar-toggler").click(function () {
+//    $("#navbarSupportedContent").toggle();
+// });
 
-    //$("#closeMenu").click(function () {
-      //  $("#navbarSupportedContent").hide();
-       // $("#navbutton").show();
-    //});
+//$("#closeMenu").click(function () {
+//  $("#navbarSupportedContent").hide();
+// $("#navbutton").show();
+//});
 //});
 
 //navbar toggler hide//
 //$('#navbutton').click(function () {
-   // $('#navbutton').hide(0);
+// $('#navbutton').hide(0);
 //});
+function myFunction() {
+  document.getElementById("payment-button-amount").innerHTML = "Sending ...";
 
-
-
-
-
+  if (document.getElementById("payment-button").keypress == true) {
+    alert("button was clicked");
+  }
+}

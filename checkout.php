@@ -22,12 +22,12 @@
                                 <img class="img-responsive ml-5" src="assets/images/payment.png"/>
                             </div>
                             <div class="form-group">
-                                <label for="cc-payment" class="control-label mb-1">Payment amount</label>
+                                <label for="cc-payment" class="control-label mb-1" required>Payment amount</label>
                                 <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" required value="$ 99.00">
                                 <span class="invalid-feedback">Enter the payment amount</span>
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Name on card</label>
+                                <label for="cc-name" class="control-label mb-1" required>Name on card</label>
                                 <input id="cc-name" name="cc-name" type="text" class="form-control cc-name" required autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
                                 <span class="invalid-feedback">Enter the name as shown on credit card</span>
                             </div>
@@ -65,7 +65,7 @@
                                 <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
                             </div>
                             <div>
-                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block text-white">
+                                <button onclick="myFunction()" id="payment-button" type="submit" class="btn btn-lg btn-info btn-block text-white">
                                     <i class="fa fa-lock fa-lg"></i>&nbsp;
                                     <span id="payment-button-amount">Pay</span>
                                     <span id="payment-button-sending" style="display:none;">Sending…</span>
